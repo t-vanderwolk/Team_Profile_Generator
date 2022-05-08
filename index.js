@@ -71,36 +71,36 @@ function addManager() {
     });
   
   }
-  function addEngineer() {
+  function addIntern() {
     inquirer.prompt([
       
       {
         type: "input",
-        name: "engineerName",
-        message: "What is the engineer's name?"
+        name: "internName",
+        message: "What is the intern's name?"
       },
 
       {
         type: "input",
-        name: "engineerId",
-        message: "What is the engineer's employee ID number?" 
+        name: "internId",
+        message: "What is the intern's employee ID number?" 
       },
 
       {
         type: "input",
-        name: "engineerEmail",
-        message: "What is the engineer's email address?"
+        name: "internEmail",
+        message: "What is the intern's email address?"
       },
 
       {
         type: "input",
-        name: "engineerGithub",
-        message: "What is the engineer's GitHub username?"
+        name: "internSchool",
+        message: "What school does the intern attend?"
       }
 
     ]).then(answers => {
-      const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
-      teamArray.push(engineer);
+      const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+      teamArray.push(intern);
       createTeam();
     });
 

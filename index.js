@@ -105,3 +105,15 @@ function addManager() {
     });
 
   }
+  function htmlBuilder () {
+    console.log("Team created!")
+
+    fs.writeFileSync(outputPath, generateTeam(teamArray), "UTF-8")
+
+
+
+createTeam();
+  }
+
+
+runApp();
